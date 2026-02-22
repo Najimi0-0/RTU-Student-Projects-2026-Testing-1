@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AppDate | Login and Registration</title>
+
+
+  <link rel="stylesheet" href="FrontPage.css">
+  <link rel="icon" type="image/png" href="Images/Icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h2 class="logo">
+            <a href="https://www.rtu.edu.ph/" target="_blank"><img id="imglogo1" src="Images/Rizal_Technological_University_seal.png" alt="Logo RTU"></a>
+            <img id="imglogo1" src="Images/AppDate-removebg-preview.png" alt="Logo AppDate">
+            <img id="imglogo1" src="Images/ICS_LOGO.png" alt="Logo AppDate">
+        </h2>
+        <nav class="navigation">
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+
+<div class="body-1">
+  <div class="wrapper">
+    <span class="icon-close" title="Close"><ion-icon name="close-outline"></ion-icon></span>
+
+    <!-- LOGIN BOX -->
+    <div class="form-box login">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+          <input id="loginEmail" type="email" placeholder=" " required>
+          <label>Email</label>
+        </div>
+
+        <div class="input-box">
+          <input id="loginPassword" type="password" placeholder=" " required>
+          <label>Password</label>
+          <button type="button" class="toggle-password" data-target="loginPassword">
+            <ion-icon name="eye-outline"></ion-icon>
+            </button>
+        </div>
+        
+        <div class="remember-forgot">
+          <label><input type="checkbox" id="Remember-CheckBox">Remember me</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+
+        <div class="login-register">
+          <p>Register using institutional Account? <a href="#" class="register-link">Register</a></p>
+        </div>
+      </form>
+    </div>
+
+    <!-- REGISTER BOX -->
+    <div class="form-box register">
+      <h2>Registration</h2>
+      <form id="registerForm">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+          <input id="regName" type="text" placeholder=" " required>
+          <label>Full Name</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+          <input id="regEmail" type="email" placeholder=" " required>
+          <label>RTU Email</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+          <input id="regDob" type="text"  placeholder=" " required
+            onfocus="(this.type='date')" 
+            onblur="if(!this.value) this.type='text'">
+          <label>Date of Birth</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="school-outline"></ion-icon></span>
+          <select id="regCourse"  placeholder=" " required>
+            <option id="select-course" disabled selected ="select-course">Select course</option>
+            <option value="BSIT">BSIT</option>
+            <option value="BSCE">BSCE</option>
+            <option value="BSCpE">BSCpE</option>
+          </select>
+          <label>Course</label>
+        </div>
+
+        <div class="input-box">
+            <input id="regPassword" type="password"  placeholder=" " required>
+          <label>Password</label>
+          <button type="button" class="toggle-password" data-target="regPassword">
+          <ion-icon name="eye-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="input-box">
+          <input id="regConfirmPassword" type="password"  placeholder=" " required>
+          <label>Confirm Password</label>
+          <button type="button" class="toggle-password" data-target="regConfirmPassword">
+            <ion-icon name="eye-outline"></ion-icon>
+          </button>
+        </div>
+
+
+        <div class="remember-forgot">
+          <label><input id="agreeTerms" type="checkbox" required> Agree to the terms & conditions</label>
+        </div>
+
+        <button type="submit" class="btn">Register</button>
+
+        <div class="login-register">
+          <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div>
+  <h1 id="welcome">Welcome to <span>App</span>Date!</h1>
+  <div id="introduction">
+    <p id="p-Hi">Hi! This is AppDate, a learning management website with an integrated system. This is used by the students of RTU-SHS and allowed them to collaborate, time manage, and remind individuals in online learning process.</p>
+  </div>
+</div>
+
+<div class="body-2">
+    <div class="container">
+        <div class="wrapper2">
+            <h1>Frequently Asked Questions</h1>
+
+            <div class="faq">
+                <button class="accordion">
+                    What is AppDate?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="pannel">
+                    <p>
+                        An active virtual classroom and an engaging online learning environment for instructors and students are the goals of AppDate, a learning management platform with an integrated system that has been thoughtfully planned and created to provide an effective learning structure in remote learning.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq">
+    <button class="accordion">
+            How do I enroll in a course?
+        <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <div class="pannel">
+        <p>
+            Click "search courses," type in the course name to find the exact course you're looking for, click the course and enter the code your professor gave you.
+        </p>
+    </div>
+</div>
+            <div class="faq">
+                <button class="accordion">
+                    What is the purpose of the calendar in AppDate?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="pannel">
+                    <p>
+                        By keeping track of significant dates, assisting with planning, and connecting with other platform features, the calendar tool helps students and teachers stay organized, communicate, and manage their time effectively.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="accordion">
+                    Where will I be notified about my tasks and upcoming events?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="pannel">
+                    <p>
+                        Reminders of tasks and forthcoming events will be sent to you through Gmail.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="accordion">
+                    I forgot my institutional email password, what should I do?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="pannel">
+                    <p>
+                        With AppDate's administrative feature, you can forget your password and have an action along with updates sent to your institutional email.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer1">
+        <footer>
+            <div id="div2">
+                <h6 id="h6-1">&copy; 2024.AppDate.Allrights Reserved.</h6>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script src="FrontPage.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
